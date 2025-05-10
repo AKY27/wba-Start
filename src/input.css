@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root{
+    --spacing: 0.25rem;
+}
+
+@theme {
+    --font-work: "Work Sans";
+    --font-crimson: "Crimson Text";
+    --color-primary: #74C69D;
+    --color-dark: #212529;
+}
