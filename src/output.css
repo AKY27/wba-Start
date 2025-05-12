@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-neutral-300: oklch(87% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -34,6 +33,8 @@
     --font-crimson: "Crimson Text";
     --color-primary: #74C69D;
     --color-dark: #212529;
+    --animate-navbar: slide-in 0.6s ease-in-out;
+    --animate-navbar-reverse: slide-out 0.6s ease-in-out;
   }
 }
 @layer base {
@@ -182,6 +183,9 @@
   }
 }
 @layer utilities {
+  .z-50 {
+    z-index: 50;
+  }
   .my-14 {
     margin-block: calc(var(--spacing) * 14);
   }
@@ -197,14 +201,14 @@
   .inline-flex {
     display: inline-flex;
   }
-  .table {
-    display: table;
-  }
   .h-\[50px\] {
     height: 50px;
   }
   .h-auto {
     height: auto;
+  }
+  .w-\[100\%\] {
+    width: 100%;
   }
   .w-\[150px\] {
     width: 150px;
@@ -233,12 +237,6 @@
   .min-w-2xs {
     min-width: var(--container-2xs);
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -247,9 +245,6 @@
   }
   .flex-nowrap {
     flex-wrap: nowrap;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -260,6 +255,9 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-end {
+    justify-content: flex-end;
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -269,18 +267,11 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .justify-self-center {
-    justify-self: center;
-  }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
+  .overflow-x-hidden {
+    overflow-x: hidden;
   }
   .rounded-md {
     border-radius: var(--radius-md);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .bg-dark {
     background-color: var(--color-dark);
@@ -315,14 +306,17 @@
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
   }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
   }
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
+  }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
-  }
-  .pl-2 {
-    padding-left: calc(var(--spacing) * 2);
   }
   .pl-2\.5 {
     padding-left: calc(var(--spacing) * 2.5);
@@ -388,23 +382,71 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-75 {
     opacity: 75%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .outline-none {
     --tw-outline-style: none;
     outline-style: none;
   }
+  .max-md\:absolute {
+    @media (width < 48rem) {
+      position: absolute;
+    }
+  }
+  .max-md\:sticky {
+    @media (width < 48rem) {
+      position: sticky;
+    }
+  }
+  .max-md\:top-0 {
+    @media (width < 48rem) {
+      top: calc(var(--spacing) * 0);
+    }
+  }
+  .max-md\:right-0 {
+    @media (width < 48rem) {
+      right: calc(var(--spacing) * 0);
+    }
+  }
+  .max-md\:h-full {
+    @media (width < 48rem) {
+      height: 100%;
+    }
+  }
+  .max-md\:w-\[200vw\] {
+    @media (width < 48rem) {
+      width: 200vw;
+    }
+  }
   .max-md\:w-full {
     @media (width < 48rem) {
       width: 100%;
+    }
+  }
+  .max-md\:animate-navbar {
+    @media (width < 48rem) {
+      animation: var(--animate-navbar);
+    }
+  }
+  .max-md\:animate-navbar-reverse {
+    @media (width < 48rem) {
+      animation: var(--animate-navbar-reverse);
+    }
+  }
+  .max-md\:border-\[rgba\(0\,0\,0\,0\.2\)\] {
+    @media (width < 48rem) {
+      border-color: rgba(0,0,0,0.2);
+    }
+  }
+  .max-md\:border-l-\(--navbar-width\) {
+    @media (width < 48rem) {
+      border-left-color: var(--navbar-width);
+    }
+  }
+  .max-md\:bg-primary {
+    @media (width < 48rem) {
+      background-color: var(--color-primary);
     }
   }
   .md\:block {
@@ -459,12 +501,7 @@
   }
 }
 :root {
-  --spacing: 0.25rem;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+  --navbar-width: min(140vw , calc(200vw - 150px));
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -474,18 +511,35 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+@keyframes slide-in {
+  0% {
+    transform: translateX(50%);
+    border-color: rgba(0,0,0,0.0);
+    display: none;
+  }
+  100% {
+    transform: translateX(0);
+    border-color: rgba(0,0,0,0.2);
+    display: block;
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+    border-color: rgba(0,0,0,0.2);
+    display: block;
+  }
+  100% {
+    transform: translateX(50%);
+    border-color: rgba(0,0,0,0.0);
+    display: none;
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
     }
   }
 }

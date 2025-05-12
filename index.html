@@ -1,166 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Start</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/src/output.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <title>Start</title>
-</head>
-
-<body>
-  <section id="hero" class="bg-primary">
-    <nav class="flex flex-col md:flex-row md:justify-between items-center">
-      <div class="flex flex-row px-4 py-5 justify-between max-md:w-full">
-        <a href="#" id="Logo" class="flex flex-row">
-          <img src="/src/images/logo.svg" alt="Logo" width="45" />
-          <span class="font-work font-medium text-3xl text-white pl-2.5">Start</span>
-        </a>
-        <button data-collapse-toggle="navbar-default" type="button"
-          class="inline-flex items-center justify-center md:hidden outline-none" aria-controls="navbar-default"
-          aria-expanded="false">
-          <img src="/src/images/menu.svg" alt="menu" width="35" />
-        </button>
+  <body class="overflow-x-hidden">
+    <section id="hero" class="bg-primary">
+      <nav class="flex flex-col md:flex-row md:justify-between items-center">
+        <div class="flex flex-row px-4 py-5 justify-between max-md:w-full">
+          <a href="#" id="Logo" class="flex flex-row">
+            <img src="/src/images/logo.svg" alt="Logo" width="45" />
+            <span class="font-work font-medium text-3xl text-white pl-2.5"
+              >Start</span
+            >
+          </a>
+          <button
+            data-collapse-toggle-1="navbar-default"
+            type="button"
+            class="inline-flex items-center justify-center md:hidden outline-none"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <img src="/src/images/menu.svg" alt="menu" width="35" />
+          </button>
+        </div>
+        <div
+          class=" hidden md:block max-md:w-[200vw] max-md:top-0 max-md:border-[rgba(0,0,0,0.2)] max-md:border-l-(--navbar-width) h- max-md:h-full z-50 max-md:absolute max-md:right-0 max-md:animate-navbar-reverse"
+          id="navbar-default"
+        >
+          <ul
+            class="flex flex-col w-full md:flex-row md:pr-1 max-md:bg-primary max-md:sticky max-md:h-full max-md:top-0"
+          >
+            <li id="buttonParent" class="pt-5 pr-4">
+              <div class="flex w-[100%] justify-end">
+              <button
+                data-collapse-toggle-2="navbar-default"
+                type="button"
+                class="inline-flex items-center justify-center md:hidden outline-none"
+                aria-controls="navbar-default"
+                aria-expanded="false"
+              >
+                <img src="/src/images/menu.svg" alt="menu" width="35" />
+              </button>
+            </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white font-normal text-xl"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-white font-normal text-xl"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-white font-normal text-xl"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-white font-normal text-xl"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div
+        class="flex flex-col flex-nowrap items-center md:flex-row-reverse p-5 pt-3 gap-7 max-w-dvw"
+      >
+        <img
+          src="/src/images/hero.svg"
+          alt="hero"
+          class="w-auto h-auto md:max-w-[50vw]"
+        />
+        <div class="w-auto min-w-2xs">
+          <h3
+            class="font-work text-base tracking-[5px] font-bold text-white uppercase"
+          >
+            welcome
+          </h3>
+          <h1 class="font-crimson font-bold text-4xl text-white">
+            Lorem ipsum dolor sit amet consectetur
+          </h1>
+          <p class="font-work font-normal text-sm text-white opacity-75">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+            nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
+            voluptate culpa nesciunt delectus iste?
+          </p>
+        </div>
       </div>
-      <div class="hidden md:block max-md:w-full" id="navbar-default">
-        <ul class="flex flex-col w-full md:flex-row md:pr-1">
-          <li>
-            <a href="#" class="block py-2 px-3 text-white font-normal text-xl" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-white font-normal text-xl">Portfolio</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-white font-normal text-xl">Services</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-white font-normal text-xl">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="flex flex-col flex-nowrap items-center md:flex-row-reverse p-5 pt-3 gap-7 max-w-dvw">
-      <img src="/src/images/hero.svg" alt="hero" class="w-auto h-auto md:max-w-[50vw]">
-      <div class="w-auto min-w-2xs">
-        <h3 class="font-work text-base tracking-[5px] font-bold text-white uppercase">
-          welcome
+    </section>
+    <section id="partners" class="bg-white px-5 py-6">
+      <div class="flex flex-col items-center gap-4">
+        <h3
+          class="font-work font-bold text-base tracking-[5px] text-primary uppercase"
+        >
+          partners
         </h3>
-        <h1 class="font-crimson font-bold text-4xl text-white">
-          Lorem ipsum dolor sit amet consectetur 
-        </h1>
-        <p class="font-work font-normal text-sm text-white opacity-75">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?
+        <h2 class="font-crimson font-bold text-2xl text-black">
+          Lorem Ipsum Dolor
+        </h2>
+        <p class="font-work font-normal text-xl text-black text-center">
+          Lorem ipsum dolor sit amet consectetur <br />
+          adipisicing elit.
         </p>
       </div>
-    </div>
-  </section>
-  <section id="partners" class="bg-white px-5 py-6 ">
-    <div class="flex flex-col items-center gap-4">
-      <h3 class="font-work font-bold text-base tracking-[5px] text-primary uppercase">
-        partners
-      </h3>
-      <h2 class="font-crimson font-bold text-2xl text-black">
-        Lorem Ipsum Dolor
-      </h2>
-      <p class="font-work font-normal text-xl text-black text-center">
-        Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
-    </div>
-    <div class="flex flex-col gap-10 w-auto items-center my-14 md:flex-row md:justify-between md:w-fit">
-      <img src="/src/images/partners/google.svg" class="w-[150px] md:w-auto md:max-w-[calc(15vw)]" alt="google"/>
-      <img src="/src/images/partners/microsoft.svg" class="w-[200px] md:w-auto md:max-w-[calc(15vw)]" alt="microsoft"/>
-      <img src="/src/images/partners/airbnb.svg" class="w-[160px] md:w-auto md:max-w-[calc(15vw)]" alt="airbnb"/>
-      <img src="/src/images/partners/facebook.svg" class="w-[190px] md:w-auto md:max-w-[calc(15vw)]" alt="facebook"/>
-      <img src="/src/images/partners/spotify.svg" class="w-[160px] md:w-auto md:max-w-[calc(15vw)]" alt="spotify"/>
-    </div>
-    <div class="flex flex-col items-center">
-      <a href="#" class="flex flex-row items-center justify-center w-[170px] h-[50px] bg-dark rounded-md text-white font-work font-bold text-base">
-        <span class="font-work font-normal text-xl text-white">
-          Learn More
-        </span>
-      </a>
-    </div>
-  </section>
-  <section id="services" class="bg-white px-5 pb-6 pt-16">
-    <div>
-      <img src="src/images/services/service1.svg" alt="">	
-      <div>
-        <h1>Lorem ipsum dolor sit amet consectetur</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
-        <a href="#">
-        <span>Learn More</span>
-      </a>
+
+      <div
+        class="flex flex-col gap-10 w-auto items-center my-14 md:flex-row md:justify-between md:w-fit"
+      >
+        <img
+          src="/src/images/partners/google.svg"
+          class="w-[150px] md:w-auto md:max-w-[calc(15vw)]"
+          alt="google"
+        />
+        <img
+          src="/src/images/partners/microsoft.svg"
+          class="w-[200px] md:w-auto md:max-w-[calc(15vw)]"
+          alt="microsoft"
+        />
+        <img
+          src="/src/images/partners/airbnb.svg"
+          class="w-[160px] md:w-auto md:max-w-[calc(15vw)]"
+          alt="airbnb"
+        />
+        <img
+          src="/src/images/partners/facebook.svg"
+          class="w-[190px] md:w-auto md:max-w-[calc(15vw)]"
+          alt="facebook"
+        />
+        <img
+          src="/src/images/partners/spotify.svg"
+          class="w-[160px] md:w-auto md:max-w-[calc(15vw)]"
+          alt="spotify"
+        />
       </div>
-    </div>
-    <div>
-      <img src="src/images/services/service2.svg" alt="">
-      <div>
-        <h1>Lorem ipsum dolor sit amet consectetur</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
-        <a href="#">
-          <span>Learn More</span>
+      <div class="flex flex-col items-center">
+        <a
+          href="#"
+          class="flex flex-row items-center justify-center w-[170px] h-[50px] bg-dark rounded-md text-white font-work font-bold text-base"
+        >
+          <span class="font-work font-normal text-xl text-white">
+            Learn More
+          </span>
         </a>
       </div>
-    </div>
-  </section>
-  <section id="team">
-    <div>
-      <h3>TEAM</h3>
-      <h1>Our Talents</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab,</p>
-    </div>
-    <div>
+    </section>
+    <section id="services" class="bg-white px-5 pb-6 pt-16">
       <div>
-        <img src="src/images/team/member1.svg" alt="">
-        <h2>Peg Legge</h2>
-        <p>CEO</p>
+        <img src="src/images/services/service1.svg" alt="" />
+        <div>
+          <h1>Lorem ipsum dolor sit amet consectetur</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+            nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
+            voluptate culpa nesciunt delectus iste?
+          </p>
+          <a href="#">
+            <span>Learn More</span>
+          </a>
+        </div>
       </div>
       <div>
-        <img src="src/images/team/member2.svg" alt="">
-        <h2>Richard Guerra</h2>
-        <p>CTO</p>
+        <img src="src/images/services/service2.svg" alt="" />
+        <div>
+          <h1>Lorem ipsum dolor sit amet consectetur</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+            nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
+            voluptate culpa nesciunt delectus iste?
+          </p>
+          <a href="#">
+            <span>Learn More</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="team">
+      <div>
+        <h3>TEAM</h3>
+        <h1>Our Talents</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
+          hic quos, ab,
+        </p>
       </div>
       <div>
-        <img src="src/images/team/member3.svg" alt="">
-        <h2>Alexandra Stolz</h2>
-        <p>Designer</p>
+        <div>
+          <img src="src/images/team/member1.svg" alt="" />
+          <h2>Peg Legge</h2>
+          <p>CEO</p>
+        </div>
+        <div>
+          <img src="src/images/team/member2.svg" alt="" />
+          <h2>Richard Guerra</h2>
+          <p>CTO</p>
+        </div>
+        <div>
+          <img src="src/images/team/member3.svg" alt="" />
+          <h2>Alexandra Stolz</h2>
+          <p>Designer</p>
+        </div>
+        <div>
+          <img src="src/images/team/member4.svg" alt="" />
+          <h2>Janet Bray</h2>
+          <p>Developer</p>
+        </div>
       </div>
-      <div>
-        <img src="src/images/team/member4.svg" alt="">
-        <h2>Janet Bray</h2>
-        <p>Developer</p>
-      </div>
-    </div>
-    <a href="#">
+      <a href="#">
         <span>Learn More</span>
       </a>
-  </section>
-  <footer class="bg-primary">
-    <div id="socials">
-      <a href="#"><img src="src/images/socials/facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="src/images/socials/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="src/images/socials/twitter.svg" alt="Twitter"></a>
-      <a href="#"><img src="src/images/socials/pinterest.svg" alt="Pinterest"></a>
-      <a href="#"><img src="src/images/socials/tiktok.svg" alt="TikTok"></a>
-      <a href="#"><img src="src/images/socials/whatsapp.svg" alt="WhatsApp"></a>
-      <a href="#"><img src="src/images/socials/youtube.svg" alt="YouTube"></a>
-    </div>
-    <div>
-      <span>&copy; Start 2022. All rights reserved.</span>
-    </div>
-  </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleButton = document.querySelector("[data-collapse-toggle]");
-      const navbar = document.getElementById("navbar-default");
+    </section>
+    <footer class="bg-primary">
+      <div id="socials">
+        <a href="#"
+          ><img src="src/images/socials/facebook.svg" alt="Facebook"
+        /></a>
+        <a href="#"
+          ><img src="src/images/socials/instagram.svg" alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img src="src/images/socials/twitter.svg" alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img src="src/images/socials/pinterest.svg" alt="Pinterest"
+        /></a>
+        <a href="#"><img src="src/images/socials/tiktok.svg" alt="TikTok" /></a>
+        <a href="#"
+          ><img src="src/images/socials/whatsapp.svg" alt="WhatsApp"
+        /></a>
+        <a href="#"
+          ><img src="src/images/socials/youtube.svg" alt="YouTube"
+        /></a>
+      </div>
+      <div>
+        <span>&copy; Start 2022. All rights reserved.</span>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton1 = document.querySelector(
+          "[data-collapse-toggle-1]"
+        );
+        const toggleButton2 = document.querySelector(
+          "[data-collapse-toggle-2]"
+        );
+        const navbar = document.getElementById("navbar-default");
 
-      toggleButton.addEventListener("click", () => {
-        navbar.classList.toggle("hidden");
+        toggleButton1.addEventListener("click", () => {
+          navbar.classList.toggle("max-md:animate-navbar");
+          navbar.classList.toggle("max-md:animate-navbar-reverse");
+          navbar.classList.toggle("hidden");
+        });
+        toggleButton2.addEventListener("click", () => {
+          navbar.classList.toggle("max-md:animate-navbar");
+          navbar.classList.toggle("max-md:animate-navbar-reverse");
+          navbar.classList.toggle("hidden");
+        });
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
