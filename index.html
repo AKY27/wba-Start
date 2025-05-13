@@ -34,7 +34,7 @@
           </button>
         </div>
         <div
-          class=" hidden md:block max-md:w-[200vw] max-md:top-0 max-md:border-[rgba(0,0,0,0.2)] max-md:border-l-(--navbar-width) h- max-md:h-full z-50 max-md:absolute max-md:right-0 max-md:animate-navbar-reverse"
+          class=" hidden md:block max-md:w-[200vw] max-md:border-[rgba(0,0,0,0.2)] max-md:border-l-(length:--navbar-width) max-md:h-full z-50 max-md:fixed max-md:right-0 max-md:top-0 max-md:animate-navbar-reverse"
           id="navbar-default"
         >
           <ul
@@ -152,39 +152,43 @@
       <div class="flex flex-col items-center">
         <a
           href="#"
-          class="flex flex-row items-center justify-center w-[170px] h-[50px] bg-dark rounded-md text-white font-work font-bold text-base"
+          class="learn-more-button"
         >
-          <span class="font-work font-normal text-xl text-white">
+          <span>
             Learn More
           </span>
         </a>
       </div>
     </section>
     <section id="services" class="bg-white px-5 pb-6 pt-16">
-      <div>
+      <div class="flex flex-col gap-8">
         <img src="src/images/services/service1.svg" alt="" />
         <div>
-          <h1>Lorem ipsum dolor sit amet consectetur</h1>
-          <p>
+          <h1 class="font-crimson text-2xl font-bold">
+            Lorem ipsum dolor sit amet consectetur
+          </h1>
+          <p class="font-work text-base py-5 text-gray-500">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
             nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
             voluptate culpa nesciunt delectus iste?
           </p>
-          <a href="#">
+          <a href="#" class="learn-more-button">
             <span>Learn More</span>
           </a>
         </div>
       </div>
-      <div>
+      <div class="flex flex-col gap-8 pt-16">
         <img src="src/images/services/service2.svg" alt="" />
         <div>
-          <h1>Lorem ipsum dolor sit amet consectetur</h1>
-          <p>
+          <h1 class="font-crimson text-2xl font-bold">
+            Lorem ipsum dolor sit amet consectetur
+          </h1>
+          <p class="font-work text-base py-5 text-gray-500">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
             nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
             voluptate culpa nesciunt delectus iste?
           </p>
-          <a href="#">
+          <a href="#" class="learn-more-button">
             <span>Learn More</span>
           </a>
         </div>
@@ -192,7 +196,9 @@
     </section>
     <section id="team">
       <div>
-        <h3>TEAM</h3>
+        <h3 class="font-work font-bold text-base tracking-[5px] text-primary uppercase">
+          team
+        </h3>
         <h1>Our Talents</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
@@ -221,7 +227,7 @@
           <p>Developer</p>
         </div>
       </div>
-      <a href="#">
+      <a href="#" class="learn-more-button">
         <span>Learn More</span>
       </a>
     </section>
