@@ -45,3 +45,11 @@
         @apply font-work font-normal text-xl text-white;
     }
   }
+
+.explore-button {
+    @apply flex items-center justify-center w-[170px] h-[50px] bg-white rounded-md font-work font-bold text-base;
+    
+    span{
+        @apply font-work font-normal text-xl text-black;
+    }
+  }

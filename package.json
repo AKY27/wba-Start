@@ -9,12 +9,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css",
-    "build:watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "build:watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "live-server": "npx live-server --port=5000",
+    "live-server:watch": "npx concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch\" \"npx live-server --port=5500\""
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.6",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
     "tailwindcss": "^4.1.6"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2"
   }
 }

@@ -34,24 +34,24 @@
           </button>
         </div>
         <div
-          class=" hidden md:block max-md:w-[200vw] max-md:border-[rgba(0,0,0,0.2)] max-md:border-l-(length:--navbar-width) max-md:h-full z-50 max-md:fixed max-md:right-0 max-md:top-0 max-md:animate-navbar-reverse"
+          class="hidden md:block max-md:w-[200vw] max-md:border-[rgba(0,0,0,0.2)] max-md:border-l-(length:--navbar-width) max-md:h-full z-50 max-md:fixed max-md:right-0 max-md:top-0 max-md:animate-navbar-reverse"
           id="navbar-default"
         >
           <ul
             class="flex flex-col w-full md:flex-row md:pr-1 max-md:bg-primary max-md:sticky max-md:h-full max-md:top-0"
           >
             <li id="buttonParent" class="pt-5 pr-4">
-              <div class="flex w-[100%] justify-end">
-              <button
-                data-collapse-toggle-2="navbar-default"
-                type="button"
-                class="inline-flex items-center justify-center md:hidden outline-none"
-                aria-controls="navbar-default"
-                aria-expanded="false"
-              >
-                <img src="/src/images/menu.svg" alt="menu" width="35" />
-              </button>
-            </div>
+              <div class="flex w-full justify-end">
+                <button
+                  data-collapse-toggle-2="navbar-default"
+                  type="button"
+                  class="inline-flex items-center justify-center md:hidden outline-none"
+                  aria-controls="navbar-default"
+                  aria-expanded="false"
+                >
+                  <img src="/src/images/menu.svg" alt="menu" width="35" />
+                </button>
+              </div>
             </li>
             <li>
               <a
@@ -80,20 +80,20 @@
         </div>
       </nav>
       <div
-        class="flex flex-col flex-nowrap items-center md:flex-row-reverse p-5 pt-3 gap-7 max-w-dvw"
+        class="flex flex-col flex-nowrap items-center md:flex-row-reverse p-6 pt-3 gap-7 max-w-dvw md:px-[10vw]"
       >
         <img
           src="/src/images/hero.svg"
           alt="hero"
-          class="w-auto h-auto md:max-w-[50vw]"
+          class="w-auto h-auto md:max-w-[50%]"
         />
-        <div class="w-auto min-w-2xs">
+        <div class="w-auto min-w-2xs flex flex-col gap-3">
           <h3
             class="font-work text-base tracking-[5px] font-bold text-white uppercase"
           >
             welcome
           </h3>
-          <h1 class="font-crimson font-bold text-4xl text-white">
+          <h1 class="font-crimson font-bold text-2xl text-white">
             Lorem ipsum dolor sit amet consectetur
           </h1>
           <p class="font-work font-normal text-sm text-white opacity-75">
@@ -101,6 +101,9 @@
             nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
             voluptate culpa nesciunt delectus iste?
           </p>
+          <a href="#" class="explore-button">
+            <span>Explore</span>
+          </a>
         </div>
       </div>
     </section>
@@ -150,13 +153,8 @@
         />
       </div>
       <div class="flex flex-col items-center">
-        <a
-          href="#"
-          class="learn-more-button"
-        >
-          <span>
-            Learn More
-          </span>
+        <a href="#" class="learn-more-button">
+          <span> Learn More </span>
         </a>
       </div>
     </section>
@@ -196,7 +194,9 @@
     </section>
     <section id="team">
       <div>
-        <h3 class="font-work font-bold text-base tracking-[5px] text-primary uppercase">
+        <h3
+          class="font-work font-bold text-base tracking-[5px] text-primary uppercase"
+        >
           team
         </h3>
         <h1>Our Talents</h1>
