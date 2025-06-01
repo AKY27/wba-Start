@@ -3,20 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/output.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="/src/output.css"/>
     <title>Start</title>
   </head>
 
   <body class="overflow-x-hidden">
-    <section id="hero" class="bg-primary">
-      <nav class="flex flex-col md:flex-row md:justify-between items-center">
-        <div class="flex flex-row px-4 py-5 justify-between max-md:w-full">
+    <section id="hero" class="bg-primary lg:px-mw">
+      <nav class="flex flex-col md:flex-row md:justify-between items-center  md:px-10">
+        <div class="flex flex-row p-5 justify-between max-md:w-full lg:px-0">  
           <a href="#" id="Logo" class="flex flex-row">
             <img src="/src/images/logo.svg" alt="Logo" width="45" />
             <span class="font-work font-medium text-3xl text-white pl-2.5"
@@ -80,23 +74,23 @@
         </div>
       </nav>
       <div
-        class="flex flex-col flex-nowrap items-center md:flex-row-reverse p-6 pt-3 gap-7 max-w-dvw md:px-[10vw]"
+        class="flex flex-col flex-nowrap items-center md:flex-row-reverse px-5 pt-3 pb-10 gap-7.5 max-w-dvw md:px-10"
       >
         <img
           src="/src/images/hero.svg"
           alt="hero"
-          class="w-auto h-auto md:max-w-[50%]"
+          class="w-max h-auto md:max-w-[50%]"
         />
-        <div class="w-auto min-w-2xs flex flex-col gap-3">
+        <div class="w-auto min-w-2xs flex flex-col gap-[15px]">
           <h3
-            class="font-work text-base tracking-[5px] font-bold text-white uppercase"
+            class="font-work text-base tracking-[5px] leading-1.25 font-bold text-white uppercase"
           >
             welcome
           </h3>
-          <h1 class="font-crimson font-bold text-2xl text-white">
+          <h1 class="font-crimson font-bold text-[28px] leading-1.25 text-white">
             Lorem ipsum dolor sit amet consectetur
           </h1>
-          <p class="font-work font-normal text-sm text-white opacity-75">
+          <p class="font-work font-normal text-[15px] leading-1.25 text-white opacity-75">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
             nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
             voluptate culpa nesciunt delectus iste?
@@ -108,23 +102,20 @@
       </div>
     </section>
     <section id="partners" class="bg-white px-5 py-6">
-      <div class="flex flex-col items-center gap-4">
-        <h3
-          class="font-work font-bold text-base tracking-[5px] text-primary uppercase"
-        >
+      <div class="section-header">
+        <h3>
           partners
         </h3>
-        <h2 class="font-crimson font-bold text-2xl text-black">
+        <h2>
           Lorem Ipsum Dolor
         </h2>
-        <p class="font-work font-normal text-xl text-black text-center">
-          Lorem ipsum dolor sit amet consectetur <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur <br>
           adipisicing elit.
         </p>
       </div>
-
       <div
-        class="flex flex-col gap-10 w-auto items-center my-14 md:flex-row md:justify-between md:w-fit"
+        class="flex flex-col gap-10 md:gap-0 w-auto items-center my-12.5 md:flex-row md:justify-between md:w-auto md:px-mw"
       >
         <img
           src="/src/images/partners/google.svg"
@@ -158,14 +149,14 @@
         </a>
       </div>
     </section>
-    <section id="services" class="bg-white px-5 pb-6 pt-16">
-      <div class="flex flex-col gap-8">
-        <img src="src/images/services/service1.svg" alt="" />
+    <section id="services" class=" flex flex-col bg-white px-5 pb-6 pt-9 gap-15 xl:px-mw">
+      <div class="info-card flex-row">
+        <img src="src/images/services/service1.svg"/>
         <div>
-          <h1 class="font-crimson text-2xl font-bold">
+          <h1>
             Lorem ipsum dolor sit amet consectetur
           </h1>
-          <p class="font-work text-base py-5 text-gray-500">
+          <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
             nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
             voluptate culpa nesciunt delectus iste?
@@ -175,13 +166,13 @@
           </a>
         </div>
       </div>
-      <div class="flex flex-col gap-8 pt-16">
-        <img src="src/images/services/service2.svg" alt="" />
+      <div class="info-card flex-row-reverse">
+        <img src="src/images/services/service2.svg"/>
         <div>
-          <h1 class="font-crimson text-2xl font-bold">
+          <h1>
             Lorem ipsum dolor sit amet consectetur
           </h1>
-          <p class="font-work text-base py-5 text-gray-500">
+          <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
             nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
             voluptate culpa nesciunt delectus iste?
@@ -192,47 +183,55 @@
         </div>
       </div>
     </section>
-    <section id="team">
-      <div>
+    <section id="team" class="bg-white px-5 flex flex-col gap-10 items-center pb-10">
+      <div class="section-header">
         <h3
           class="font-work font-bold text-base tracking-[5px] text-primary uppercase"
         >
           team
         </h3>
-        <h1>Our Talents</h1>
+        <h2>Our Talents</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo
-          hic quos, ab,
+          Lorem ipsum, dolor sit amet consectetur <br>
+          adipisicing elit.
         </p>
       </div>
-      <div>
+      <div class="team-members">
         <div>
-          <img src="src/images/team/member1.svg" alt="" />
-          <h2>Peg Legge</h2>
-          <p>CEO</p>
+          <div>
+            <img src="src/images/team/member1.svg" alt="" />
+            <h2>Peg Legge</h2>
+            <p>CEO</p>
+          </div>
         </div>
         <div>
-          <img src="src/images/team/member2.svg" alt="" />
-          <h2>Richard Guerra</h2>
-          <p>CTO</p>
+          <div>
+            <img src="src/images/team/member2.svg" alt="" />
+            <h2>Richard Guerra</h2>
+            <p>CTO</p>
+          </div>
         </div>
         <div>
-          <img src="src/images/team/member3.svg" alt="" />
-          <h2>Alexandra Stolz</h2>
-          <p>Designer</p>
+          <div>
+            <img src="src/images/team/member3.svg" alt="" />
+            <h2>Alexandra Stolz</h2>
+            <p>Designer</p>
+          </div>
         </div>
         <div>
-          <img src="src/images/team/member4.svg" alt="" />
-          <h2>Janet Bray</h2>
-          <p>Developer</p>
+          <div>
+            <img src="src/images/team/member4.svg" alt="" />
+            <h2>Janet Bray</h2>
+            <p>Developer</p>
+          </div>
         </div>
       </div>
       <a href="#" class="learn-more-button">
         <span>Learn More</span>
       </a>
     </section>
-    <footer class="bg-primary">
-      <div id="socials">
+    <footer class="bg-primary flex flex-col items-center justify-between px-5 py-7.5 gap-5  md:flex-row xl:px-mw">
+      <div id="socials" class="flex flex-row gap-5">
         <a href="#"
           ><img src="src/images/socials/facebook.svg" alt="Facebook"
         /></a>
@@ -254,7 +253,7 @@
         /></a>
       </div>
       <div>
-        <span>&copy; Start 2022. All rights reserved.</span>
+        <span class="font-work text-xl leading-1.25 text-white">&copy; Start 2022. All rights reserved.</span>
       </div>
     </footer>
     <script>
